@@ -1,0 +1,42 @@
+{
+  "name": "practice-backend-2026",
+  "version": "1.0.0",
+  "description": "Веб-программирование | 2026",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheltumanov/practice-backend-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheltumanov/practice-backend-2026/issues"
+  },
+  "homepage": "https://github.com/cheltumanov/practice-backend-2026#readme",
+  "dependencies": {
+    "@prisma/client": "^7.5.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^7.5.0",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.0"
+  }
+}
