@@ -3,6 +3,7 @@ import express from "express";
 import swaggerUi from "swagger-ui-express";
 
 import { createAuthRouter } from "./auth/auth.router.js";
+import { createSurveysRouter } from "./surveys/surveys.router.js";
 
 function buildOpenApiSpec() {
   return {
@@ -78,6 +79,7 @@ export function createApp() {
   app.get("/health", (_req, res) => res.status(200).json({ ok: true }));
 
   app.use("/auth", createAuthRouter());
+  app.use("/surveys", createSurveysRouter());
 
   const spec = buildOpenApiSpec();
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(spec));
